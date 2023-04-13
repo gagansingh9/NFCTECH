@@ -105,7 +105,7 @@ echo  $fecha_actual;
 </div>
 
 <div class="bg bg2">
-  <button class="button">Text</button>
+  <button class="button">TextTori</button>
 </div>
 </div>
 </main>
