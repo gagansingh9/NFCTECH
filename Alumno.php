@@ -37,7 +37,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != true) {
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="#">Calendarios</a>
+            <a class="nav-link " href="#">Calendarios.</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " href="#">Cursos</a>
