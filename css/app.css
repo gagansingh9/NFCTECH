@@ -18,7 +18,7 @@
 
 .fondo {
  
-   background-image: url(/app/logo.jpg);
+   background-image: url(../logo.jpg);
     background-repeat: no-repeat;
     background-size: cover ;
     background-attachment: fixed;
