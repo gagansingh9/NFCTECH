@@ -43,7 +43,7 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="../app/miperfil.php">Mi Perfil</a></li>
+              <li><a class="dropdown-item" href="./miperfil.php">Mi Perfil</a></li>
             </ul>
 
           <li class="nav-item" id="logout">

@@ -30,7 +30,7 @@
         </li>
 
         <li class="nav-item ">
-                        <a class="nav-link "  href="../app/PagPromo/ofrecemos.html">Que ofrecemos</a>
+        <a class="nav-link "  href="../app/PagPromo/ofrecemos.html">Que ofrecemos</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link " href="../app/PagPromo/dondeestamos.html">Donde estamos </a>

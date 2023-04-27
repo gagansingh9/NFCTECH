@@ -28,13 +28,13 @@
         </li>
 
         <li class="nav-item">
-                        <a class="nav-link "  href="#">Que ofrecemos</a>
+        <a class="nav-link "  href="./PagPromo/ofrecemos.html">Que ofrecemos</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link " href="#">Donde estamos </a>
+                        <a class="nav-link " href="./PagPromo/dondeestamos.html">Donde estamos </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link "  href="#">Quienes somos</a>
+                        <a class="nav-link "  href="./PagPromo/quienessomos.html">Quienes somos</a>
                      </li>
                      <li class="nav-item" id="registro">
                      <form action="Registrate.php">
