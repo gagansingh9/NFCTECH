@@ -1,12 +1,4 @@
-<?php
-session_start();
- 
-if (!isset($_SESSION['rol']) || $_SESSION['rol'] != true) {
-  header("location: Sesion.php");
-  exit;
-}
 
-?>
 <!doctype html>
 <html lang="en">
 
@@ -25,7 +17,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != true) {
   <nav class="navbar sticy-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="Alumno.php">
-        <img src="../logo.png" id="logo">
+        <img src="logo.png" id="logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -37,10 +29,10 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != true) {
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="#">Calendarios</a>
+            <a class="nav-link " href="../app/listadealumnos.php">Lista de alumnos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#">Lista de alumnos</a>
+            <a class="nav-link " href="#">Cursos</a>
           </li>
 
           <li class="nav-item dropdown">
@@ -51,7 +43,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != true) {
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+              <li><a class="dropdown-item" href="../app/miperfil.php">Mi Perfil</a></li>
             </ul>
 
           <li class="nav-item" id="logout">

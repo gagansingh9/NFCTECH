@@ -8,59 +8,52 @@
 
 <body>
 
-
-  <?php
-
-
-  $login = false;
-  $showError = false;
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include 'partials/_dbconnect.php';
-
-    $nombre = $_POST['nombre'];
-    $password = $_POST['password'];
-    
-    setcookie("nombre", $nombre); 
-   
-
-    // $pass1= password_hash($password, PASSWORD_DEFAULT);
-
-    $sql = "SELECT * FROM usuarios WHERE nombre = '$nombre' ";
-
-    $result = mysqli_query($conn, $sql);
+<?php
 
 
 
-    if (mysqli_num_rows($result) > 0) {
-      while ($row = mysqli_fetch_assoc($result)) {
-        
-        $username = $row['nombre'];
-        $db_user_hashed_password = $row['password'];
-      }
-    } else  {
-      throw new Exception("Error Processing Request", 1);
-    }
-
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+ include 'partials/_dbconnect.php';
 
 
-
-    if (password_verify($password, $hashed_password)) {
-      session_start();
-      $_SESSION['rol'] = 1;
-      header("Location: Alumno.php");
-    } else {
-      $_SESSION['rol'] = 2;
-      header("Location: Inicio.php");
-    }
-  }
+ $nombre = $_POST['nombre'];
+ $password = $_POST['password'];
+ $hash = hash("sha256", $password);
 
 
+ setcookie("nombre", $nombre);
 
-  mysqli_close($conn);
+ $resultado = mysqli_query($conn, "SELECT * FROM usuarios WHERE nombre = '$nombre' ");
 
-  ?>
 
+ if (mysqli_num_rows($resultado) == 1)
+ {
+ $row = mysqli_fetch_assoc($resultado);
+ $db_user_hashed_password = $row['password'];
+$rol = $row['rol'];
+$verify = $hash == $db_user_hashed_password;
+
+if ($verify && $rol == 1)
+ {
+ header("Location: Alumno.php");
+ exit();
+ }
+else if ($verify && $rol == 2)
+ {
+ header("Location: profe.php");
+ exit();
+ }
+ else {
+ echo "<script>alert('La contraseña no es correcta');</script>";
+ }
+ }
+ else
+ {
+ echo "<script>alert('El usuario no existe');</script>";
+}
+}
+?>
 
 
 

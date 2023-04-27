@@ -21,29 +21,34 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $password = $_POST["password"];
   $rol = $_POST["rol"];
   $nombre = $_POST["nombre"];
-  $confirmPassword = $_POST['confirm-password'];
-  $hashed_password = password_hash( $confirmPassword, PASSWORD_DEFAULT);
+  $cpassword = $_POST['confirm-password'];
 
 
+  setcookie("nombre", $nombre); 
+  $validar = mysqli_query($conn,"SELECT * FROM usuarios WHERE id = '$id'");
 
-  $sql = "INSERT INTO usuarios (id, password, rol, nombre, dt) VALUES ('$id', '$hashed_password', '$rol', '$nombre', current_timestamp())";
-  $validar = "SELECT * FROM usuarios WHERE id = $id";
-  $validando = $conn->query($validar);
-
-
-  if ($validando->num_rows > 0) {
-    echo " <h1> El usuario ya se encuentra registrado</h1>";
-  } else {
-
-    if ($conn->query($sql) === TRUE) {
-      $_SESSION ['rol'] = 1;
-       header("Location: Sesion.php");
-    } else {
-      $_SESSION ['rol'] = 2;
-      header("Location: Sesion.php"); 
-    }
+  if ($validar->num_rows > 0) {
+    // Display an error message
+    header( "Location: error.php");
+    } 
+    else { if(($password == $cpassword)){
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    $sql = "INSERT INTO usuarios (id, password, rol, nombre, dt) VALUES ('$id', '$hash', '$rol', '$nombre', current_timestamp())";
+    $validando = $conn->query($sql);
+    header( "Location: Sesion.php");
+    
   }
+  else {
+
+   
+  echo "<script>alert('La contraseña no es correcta');</script>";    
+  } 
+
 }
+
+}
+
+
   $conn->close();
 
 

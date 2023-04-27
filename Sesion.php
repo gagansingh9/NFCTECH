@@ -1,4 +1,52 @@
+
 <?php setcookie("nombre", "", time() - 3600);  ?>
+
+
+<?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST")
+{
+ include 'partials/_dbconnect.php';
+
+
+ $nombre = $_POST['nombre'];
+ $password = $_POST['password'];
+ $hash = hash("sha256", $password);
+
+
+ setcookie("nombre", $nombre);
+
+ $resultado = mysqli_query($conn, "SELECT * FROM usuarios WHERE nombre = '$nombre' ");
+
+
+ if (mysqli_num_rows($resultado) == 1)
+ {
+ $row = mysqli_fetch_assoc($resultado);
+ $db_user_hashed_password = $row['password'];
+$rol = $row['rol'];
+$verify = $hash == $db_user_hashed_password;
+
+if ($verify && $rol == 1)
+ {
+ header("Location: Alumno.php");
+ exit();
+ }
+else if ($verify && $rol == 2)
+ {
+ header("Location: profe.php");
+ exit();
+ }
+ else {
+  header("Location: error2.php");
+}
+ }
+ else
+ {
+  header("Location: error3.php");
+}
+}
+?>
+
 
 <!doctype html>
 <html lang="en">
@@ -16,7 +64,7 @@
   <nav class="navbar sticy-top navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="Inicio.php">
-  <img src="../logo.png" id="logo">
+  <img src="logo.png" id="logo">
   </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -28,13 +76,13 @@
         </li>
 
         <li class="nav-item">
-                        <a class="nav-link "  href="#">Que ofrecemos</a>
+        <a class="nav-link "  href="../app/PagPromo/ofrecemos.html">Que ofrecemos</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link " href="#">Donde estamos </a>
+                        <a class="nav-link " href="../app/PagPromo/dondeestamos.html">Donde estamos </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link "  href="#">Quienes somos</a>
+                        <a class="nav-link "  href="../app/PagPromo/quienessomos.html">Quienes somos</a>
                      </li>
                      <li class="nav-item" id="registro">
                      <form action="Registrate.php">
@@ -43,7 +91,7 @@
                      </li>
                      <li  class="nav-item" id="sesion">  
                       <form action="Sesion.php">
-                       <input class="btn btn-secondary"  type="submit" value="Iniciar Sesión" />
+                       <input class="btn btn-secondary"  type="submit" value="Iniciar Sesión"  />
                       </form></li>
                       
                         
@@ -62,7 +110,7 @@ class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
 <h3>Iniciar Sesión </h3>
 </div>
 <div class="card-body w-100">
-<form name="login" action="sesioncod.php " method="post">
+<form name="login" action="sesion.php " method="post">
 <div class="input-group form-group mt-3">
 <div class="bg-secondary rounded-start">
 <span class="m-3"><i class="fas fa-user mt-2"></i></span>

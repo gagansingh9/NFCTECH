@@ -1,12 +1,4 @@
-<?php
-session_start();
- 
-if (!isset($_SESSION['rol']) || $_SESSION['rol'] != true) {
-  header("location: Sesion.php");
-  exit;
-}
 
-?>
 <!doctype html>
 <html lang="en">
 
@@ -37,7 +29,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != true) {
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="#">Calendarios.</a>
+            <a class="nav-link " href="calendario.php">Calendarios</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " href="#">Cursos</a>
@@ -51,7 +43,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != true) {
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+              <li><a class="dropdown-item" href="../app/miperfil.php">Mi Perfil</a></li>
             </ul>
 
           <li class="nav-item" id="logout">
@@ -77,9 +69,9 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != true) {
 
     if ($hora < 12) {
       echo "<h1 style='font-size: 30px;'>Bienvenido " . $cookie . "</br> <h1 style='font-size: 20px;'>BUENOS DIAS </h1>  ";
-    } else if ($hora < 18) {
+    } else if ($hora < 20) {
       echo " <h1 style='font-size: 30px;'>Bienvenido " . $cookie . "</br> <h1 style='font-size: 20px;'>BUENAS TARDES </h1>";
-    } else {
+    } else  {
       echo "<h1 style='font-size: 30px;'>Bienvenido " . $cookie . "</br> </h1> <h1 style='font-size: 20px;'>BUENAS NOCHES  </h1> ";
     }
 
