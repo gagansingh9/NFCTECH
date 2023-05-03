@@ -19,33 +19,20 @@
   <nav class="navbar sticy-top navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
   <a class="navbar-brand" href="index.php">
-  <img src="logo.png" id="logo">
+  <img src="images/logo.png" id="logo">
   </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
-        </li>
-
-        <li class="nav-item ">
-        <a class="nav-link "  href="./PagPromo/ofrecemos.html">Que ofrecemos</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link " href="./PagPromo/dondeestamos.html">Donde estamos </a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link "  href="./PagPromo/quienessomos.html">Quienes somos</a>
-                     </li>
                      <li class="nav-item " id="registro">
-                     <form action="Registrate.php">
+                     <form action="php/Registrate.php">
                        <input class="btn btn-secondary" type="submit" value="Regístrate" />
                       </form>
                      </li>
                      <li  class="nav-item" id="sesion">  
-                      <form action="Sesion.php">
+                      <form action="php/Sesion.php">
                        <input class="btn btn-secondary"  type="submit" value="Iniciar Sesión" />
                       </form></li>
                         
