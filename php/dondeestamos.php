@@ -1,22 +1,47 @@
 <?php
-$nombre = $_POST['name'];
-$mail = $_POST['email'];
-$empresa = $_POST['message'];
+//Import PHPMailer classes into the global namespace
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+ 
+require '../vendor/autoload.php';
 
-$header = 'From: ' . $mail . " \r\n";
-$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
+$mail = new PHPMailer(true);
+$mail->isSMTP();
+$mail->SMTPAuth = true;
+//to view proper logging details for success and error messages
+// $mail->SMTPDebug = 1;
+$mail->Host = 'smtp.gmail.com';  //gmail SMTP server
+$mail->Username = 'camofficialteam@gmail.com';   //email
+$mail->Password = 'uqmeqngvlmfmxnhs' ;   //16 character obtained from app password created
+$mail->Port = 465;                    //SMTP port
+$mail->SMTPSecure = "ssl";
 
-$mensaje = "Este mensaje fue enviado por " . $nombre . ",\r\n";
-$mensaje .= "Su e-mail es: " . $mail . " \r\n";
-$mensaje .= "Mensaje: " . $_POST['menssage'] . " \r\n";
-$mensaje .= "Enviado el " . date('d/m/Y', time());
+//sender information
+$mail->setFrom('camofficialteam@gmail.com', 'CAM');
 
-$para = 'pr0yect0c4@gmail.com';
-$asunto = 'Mensaje de mi sitio web';
+//receiver email address and name
+$mail->addAddress($_POST['email'], $_POST['name']); 
 
-mail($para, $asunto, utf8_decode($mensaje), $header);
+// Add cc or bcc   
+// $mail->addCC('email@mail.com');  
+// $mail->addBCC('user@mail.com');  
+ 
+ 
+$mail->isHTML(true);
+ 
+$mail->Subject = 'PHPMailer SMTP test';
+$mail->Body    = "<h4> PHPMailer the awesome Package </h4>
+<b>PHPMailer is working fine for sending mail</b>
+    <p> This is a tutorial to guide you on PHPMailer integration</p>";
 
-header("dondeestamos.html");
+// Send mail   
+if (!$mail->send()) {
+    echo 'Email not sent an error was encountered: ' . $mail->ErrorInfo;
+} else {
+    echo 'Message has been sent.';
+}
+
+$mail->smtpClose();
+
+
 ?>
