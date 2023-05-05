@@ -60,7 +60,7 @@ button {
 table {
  border-collapse: collapse;
  width: 100%;
- margin-right: 
+
  background-color: white;
  
 }

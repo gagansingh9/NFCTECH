@@ -1,4 +1,4 @@
-<?php include 'navbar2.html';?>
+<?php include '../html/navbar2.html';?>
 <!doctype html>
 <html lang="en">
 
@@ -32,7 +32,7 @@
 <div class="centrado1 tabla-responsive " id="tabla" > <h1 class="font1" >Lista de alumnos</h1>
 
 <?php
-  include 'partials/_dbconnect.php';
+  include '../partials/_dbconnect.php';
 $result = mysqli_query($conn, 'SELECT * FROM registro R, usuarios U WHERE R.id = U.id  ');
 echo '<table class="table table-bordered">';
 echo '<thead>';

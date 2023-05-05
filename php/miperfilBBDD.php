@@ -1,6 +1,6 @@
 <?php
 
-include 'partials/_dbconnect.php';
+include '../partials/_dbconnect.php';
 
 $username = $_COOKIE["nombre"];
 $result = mysqli_query($conn, "SELECT nombre FROM usuarios WHERE nombre = '$username'");
