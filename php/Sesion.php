@@ -6,7 +6,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
- include '../partials/_dbconnect.php';
+ include '../partials/_dbconnect.php';      
 
 
  $nombre = $_POST['nombre'];
@@ -28,7 +28,7 @@ $verify = $hash == $db_user_hashed_password;
 
 if ($verify && $rol == 1)
  {
- header("Location: Alumno.php");
+ header("Location: alumno.php");
  exit();
  }
 else if ($verify && $rol == 2)

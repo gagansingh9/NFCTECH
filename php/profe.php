@@ -47,7 +47,7 @@
             </ul>
 
           <li class="nav-item" id="logout">
-            <form action="../php/Sesion.php">
+            <form action="../php/sesion.php">
               <input class="btn btn-secondary" type="submit" value="Cerrar Sesión" />
             </form>
           </li>

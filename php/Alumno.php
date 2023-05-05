@@ -16,7 +16,7 @@
 <body class="fondo">
   <nav class="navbar sticy-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../php/Alumno.php">
+      <a class="navbar-brand" href="../php/alumno.php">
         <img src="../images/logo.png" id="logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Alumno.php">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="alumno.php">Inicio</a>
           </li>
 
           <li class="nav-item">
@@ -43,11 +43,11 @@
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="../php/miperfil.php">Mi Perfil</a></li>
+              <li><a class="dropdown-item" href="../php/">Mi Perfil</a></li>
             </ul>
 
           <li class="nav-item" id="logout">
-            <form action="Sesion.php">
+            <form action="sesion.php">
               <input class="btn btn-secondary" type="submit" value="Cerrar Sesión" />
             </form>
           </li>
