@@ -3,7 +3,7 @@ setcookie("nombre", "", time() - 3600);
 // Establecer la conexión con la base de datos
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-  include 'partials/_dbconnect.php';
+  include '../partials/_dbconnect.php';
 
 $id = $_POST["id"];
 $password = $_POST["password"];

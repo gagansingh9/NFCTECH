@@ -15,7 +15,7 @@
   $showAlert = false;
 $showError = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include 'partials/_dbconnect.php';
+    include '../partials/_dbconnect.php';
 
   $id = $_POST["id"];
   $password = $_POST["password"];

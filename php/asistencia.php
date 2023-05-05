@@ -84,7 +84,7 @@
 
 <?php
 ini_set('display_errors', 0);
-include 'partials/_dbconnect.php';
+include '../partials/_dbconnect.php';
 
   
 // Obtener la ID de usuario desde el formulario

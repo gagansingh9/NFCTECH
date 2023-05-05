@@ -6,7 +6,7 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
- include 'partials/_dbconnect.php';
+ include '../partials/_dbconnect.php';
 
 
  $nombre = $_POST['nombre'];
