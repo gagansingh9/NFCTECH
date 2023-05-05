@@ -28,7 +28,7 @@ if ($validar->num_rows > 0) {
   $hash = hash("sha256", $password);
   $sql = "INSERT INTO usuarios (id, password, rol, nombre, dt) VALUES ('$id', '$hash', '$rol', '$nombre', current_timestamp())";
   $validando = $conn->query($sql);
-  header( "Location: Sesion.php");
+  header( "Location: sesion.php");
   
 }
 else {
@@ -130,7 +130,7 @@ name="login-btn"> Registrar </button>
 </div>
 <div class="card-footer ">
 <div class="d-flex justify-content-center">
-<div class="text-primary"> Ya tienes cuenta? <a href="../php/Sesion.php"> Iniciar Sesión</a>  </div>
+<div class="text-primary"> Ya tienes cuenta? <a href="../php/sesion.php"> Iniciar Sesión</a>  </div>
 </div>
 </div>
 

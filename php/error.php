@@ -37,12 +37,12 @@
                         <a class="nav-link "  href="./PagPromo/quienessomos.html">Quienes somos</a>
                      </li>
                      <li class="nav-item" id="registro">
-                     <form action="../php/Registrate.php">
+                     <form action="../php/registrate.php">
                        <input class="btn btn-secondary" type="submit" value="Regístrate" />
                       </form>
                      </li>
                      <li  class="nav-item" id="sesion">  
-                      <form action="../php/Sesion.php">
+                      <form action="../php/sesion.php">
                        <input class="btn btn-secondary"  type="submit" value="Iniciar Sesión" />
                       </form></li>
                       
