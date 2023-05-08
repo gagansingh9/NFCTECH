@@ -117,7 +117,7 @@ name="login-btn" > Iniciar </button>
 </div>
 <div class="card-footer ">
 <div class="d-flex justify-content-center">
-<div class="text-primary"> No tienes cuenta? <a href="../php/Registrate.php">Regístrate</a></div>
+<div class="text-primary"> No tienes cuenta? <a href="../php/registrate.php">Regístrate</a></div>
 </div></div>
 
 
