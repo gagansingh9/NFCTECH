@@ -131,7 +131,7 @@ name="login-btn"> Registrar </button>
 <div class="card-footer ">
 <div class="d-flex justify-content-center">
 <div class="text-primary"> Ya tienes cuenta? <a href="../php/sesion.php"> Iniciar Sesión</a>  </div>
-</div>
+</div>     
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
