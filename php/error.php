@@ -22,21 +22,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.php">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="../PagPromo/quienessomos.html ">Sobre Nosotros</a>
         </li>
-
-        <li class="nav-item">
-        <a class="nav-link "  href="./PagPromo/ofrecemos.html">Que ofrecemos</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link " href="./PagPromo/dondeestamos.html">Donde estamos </a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link "  href="./PagPromo/quienessomos.html">Quienes somos</a>
-                     </li>
-                     <li class="nav-item" id="registro">
+                     <li class="nav-item " id="registro">
                      <form action="../php/registrate.php">
                        <input class="btn btn-secondary" type="submit" value="Regístrate" />
                       </form>
@@ -45,9 +35,10 @@
                       <form action="../php/sesion.php">
                        <input class="btn btn-secondary"  type="submit" value="Iniciar Sesión" />
                       </form></li>
-                      
                         
                     </ul>
+                        
+                
     
     </div>
   </div>
