@@ -336,3 +336,42 @@ span {
 td:active>span {
     visibility: visible;
 }
+
+
+@media only screen and (max-width: 2685px) {
+    #registro {
+       
+        
+            position: relative;
+            left: 1075px;
+      
+        
+    }
+    #sesion
+{
+    position: relative;
+    left: 1100px;
+    
+
+}
+  }
+
+  @media only screen and (max-width: 415px) {
+    #registro {
+       
+        
+            position: relative;
+            left: -300px;
+            top: 38px;
+
+      
+        
+    }
+    #sesion
+{
+    position: relative;
+    left: 110px;
+    
+
+}
+  }
