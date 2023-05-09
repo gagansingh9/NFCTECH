@@ -29,10 +29,10 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="../php/calendario.php">Calendarios</a>
+            <a class="nav-link " href="../php/calendario.php">Calendarios</a>     
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#">Cursos</a>
+            <a class="nav-link " href="../html/cursos.html">Cursos</a>
           </li>
 
           <li class="nav-item dropdown">

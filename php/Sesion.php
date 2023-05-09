@@ -90,7 +90,7 @@ class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
 <span class="m-3"><i class="fas fa-user mt-2"></i></span>
 </div>
 
-<input type="text" class="form-control" placeholder="Nombre Usuario"
+<input type="text" class="form-control" placeholder="Nombre y Apellido"        
 name="nombre" type="nombre" id="nombre" required>
 </div>
 <div class="input-group form-group mt-3">

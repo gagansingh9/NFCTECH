@@ -86,7 +86,7 @@ class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
 </div>
 <input type="number" class="form-control" placeholder="Id"
 name="id" type="id" minlength="10" required>
-<input type="text" class="form-control" placeholder="Nombre Usuario"
+<input type="text" class="form-control" placeholder="Nombre y Apellido"
 name="nombre" type="nombre" minlength="5" required>
 </div>
 <div class="input-group form-group mt-3">
